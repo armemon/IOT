@@ -1,0 +1,37 @@
+print("Hello world")
+class Student():
+    def __init__(this, name, roll, Class, school):
+        this.name=name
+        this.roll=roll
+        this.Class=Class
+        this.school=school
+    def perc(self, arduino, python, c, be):
+        total=arduino +python+c+be
+        perc=total/4
+        return perc
+        
+    def grade(this,perc):
+        if perc>=80:
+            grade="A+"
+        elif perc>=70:
+            grade="A"
+        elif perc>=60:
+            grade="B"
+        elif perc>=50:
+            grade="C"
+        elif perc>=40:
+            grade="D"
+        elif perc>=33:
+            grade="E"
+        else:
+            grade="F"
+        return grade
+    def Roll(self):
+        print(self.roll)
+student1= Student("Abdul", 123, "IOT", "NED")
+print(student1.name)
+perc=student1.perc(80,80,70,80)
+grade=student1.grade(perc)
+print(perc)
+print(grade)
+student1.Roll()
