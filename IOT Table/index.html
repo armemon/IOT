@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    
+</body>
+</html>
+<div style="text-align: center;">
+    <h1 style="background-color: rgb(233, 229, 229);">Class Task </h1>
+
+    <table border="1" style="border-collapse:collapse; margin-left: auto;
+margin-right: auto;" bgcolor="#ffffff">
+        <tr>
+            <th colspan="6" bgcolor="0BEFF6"> student mark sheet</th>
+
+        </tr>
+        <tr>
+            <th width="100" bgcolor="green">Name </th>
+            <th bgcolor="6EFF33">Maths</th>
+            <th bgcolor="green">Science</th>
+            <th bgcolor="6EFF33">English</th>
+            <th bgcolor="green">Physics</th>
+            <th bgcolor="6EFF33">GK</th>
+        </tr>
+        <tr>
+            <th bgcolor="green">David</th>
+            <th bgcolor="6EFF33" width="90">85</th>
+            <th width="90" bgcolor="green">87</th>
+            <th bgcolor="6EFF33" width="90">88</th>
+            <th width="90" bgcolor="green">92</th>
+            <th bgcolor="6EFF33" width="120">88</th>
+        </tr>
+        <tr>
+            <th bgcolor="green">Richard</th>
+            <th bgcolor="6EFF33" width="90">91</th>
+            <th width="90" bgcolor="green">81</th>
+            <th bgcolor="6EFF33" width="90">78</th>
+            <th width="90" bgcolor="green">71</th>
+            <th bgcolor="6EFF33" width="120">74</th>
+        </tr>
+        <tr>
+            <th bgcolor="green">John</th>
+            <th bgcolor="6EFF33" width="90">81</th>
+            <th width="90" bgcolor="green">86</th>
+            <th bgcolor="6EFF33" width="90">88</th>
+            <th width="90" bgcolor="green">84</th>
+            <th bgcolor="6EFF33" width="120">92</th>
+        </tr>
+        <tr>
+            <th bgcolor="green">Tony</th>
+            <th bgcolor="6EFF33" width="90">84</th>
+            <th width="90" bgcolor="green">86</th>
+            <th bgcolor="6EFF33" width="90">87</th>
+            <th bgcolor="green">82</th>
+            <th bgcolor="6EFF33" width="120">81</th>
+        </tr>
+        <tr>
+            <th bgcolor="green"> Scott</th>
+            <th bgcolor="6EFF33" width="90">71</th>
+            <th width="90" bgcolor="green">79</th>
+            <th bgcolor="6EFF33" width="90">82</th>
+            <th width="90" bgcolor="green">88</th>
+            <th bgcolor="6EFF33" width="120">89</th>
+        </tr>
+    </table>
+    <br><br>
+    <div style="background-color: rgb(233, 229, 229);">
+        <form action="" width="500px" style="color: coral; margin: 0 300px; " >
+            <fieldset style="border-color: blue;">
+                <legend style="text-align: left; color: rgb(173, 12, 236);">Form</legend>
+                <p>Username <input type="text" name="username"></p>
+                <p>Password <input type="password" name="password" id=""></p>
+                <p>Comments<textarea rows="5"></textarea></p>
+                <p>Select your favorite cities:<br>
+                    <input list="city" name="Cities">
+                    <datalist name="Cities" id="city">
+                        <option value="Karachi">Karachi</option>
+                        <option value="Lahore">Lahore</option>
+                        <option value="Islamabad">Islamabad</option>
+                        <option value="Peshawar">Peshawar</option>
+                        <option value="Quetta">Quetta</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                    </datalist>
+                </p>
+                <p> Your Favirote Language:<br />
+                    <input type="radio" id="html" name="fav_language" value="HTML">
+                    <label for="html">HTML</label><br>
+                    <input type="radio" id="css" name="fav_language" value="CSS">
+                    <label for="css">CSS</label><br>
+                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                    <label for="javascript">JavaScript</label>
+                </p>
+                <p>To communicate You use:<br />
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1">bike</label><br>
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <label for="vehicle2">car</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label for="vehicle3">Aeroplane</label>
+                </p>Upload your song<br />
+                <p><input type="file" value="song"></p>
+                <button>Submit</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h5 align="center">WM1345 Abdul Rahman Memon</h5>
+    <div> <img aign="center" src="Images/download-removebg-preview.png" alt="saylani logo">
+        <h2 align="center"><u>Student Registration form</u></h2><br>
+    </div>
+    <form action="thanks.html" method="post">
+        <br>
+        <p><label for="name"><span class="explain">*</span>First Name:</label> <input type="text" name="name" id="name" size="20" maxlength="30"
+                required pattern="[A-Za-z]+" /><span class="explain">(max 30 characters a-z and A-Z) </span>
+        </p>
+        <p><label for="surname"><span class="explain">*</span>Last Name:</label> <input type="text" name="surname" id="surname" size="20"
+                maxlength="30" required pattern="[A-Za-z]+" /><span class="explain">(max 30 characters a-z and A-Z)
+            </span></p>
+        <p><label for="birth"><span class="explain">*</span>Date of Birth</label> <input type="date" name="birth" id="birth" required></p>
+        <p><label for="email">Email ID:</label> <input type="email" name="email" id="email" size="20" />
+        </p>
+        <p><label for="number"><span class="explain">*</span>Mobile Number:</label> <input type="tel" name="number" id="number" size="20" pattern="[0-9]+"
+                maxlength="10" required /><span class="explain">(10 digit number)</span></p>
+        <p><label for="gender"><span class="explain">*</span>Gender:</label>
+            <input type="radio" value="m" name="gender" id="male" required><label class="other" for="male">Male</label>
+            <input type="radio" value="f" name="gender" id="female"><label class="other" for="female">Female</label></p>
+        <p><label for="address"><span class="explain">*</span>Address:</label> <textarea name="address" id="address" rows="5" required></textarea></p>
+        <p><label for="city"><span class="explain">*</span>City:</label> <input type="text" name="city" id="city" size="20" maxlength="30" required
+                pattern="[A-Za-z]+" /><span class="explain">(max 30 characters a-z and A-Z) </span></p>
+        <p><label for="pin">Pin Code:</label> <input type="text" name="pin" id="pin" size="20" maxlength="6" /><span class="explain">(max 6 digit)</span></p>
+        <p><label for="state">State:</label> <input type="text" name="state" id="state" size="20" maxlength="30"
+                pattern="[A-Za-z]+" /><span class="explain">(max 30 characters a-z and A-Z) </span></p>
+        <p><label for="country"><span class="explain">*</span>Country:</label> <input type="text" name="country" id="country" size="20" maxlength="30"
+                required pattern="[A-Za-z]+" /><span class="explain">(max 30 characters a-z and A-Z) </span></p>
+        <p><label>Hobbies:</label>
+            <input type="checkbox" name="hobbies" id="drawing" value="drawing"><label class="other"
+                for="drawing">Drawing</label>
+            <input type="checkbox" name="hobbies" id="singing" value="singing"><label class="other"
+                for="singing">Singing</label>
+            <input type="checkbox" name="hobbies" id="sketching" value="sketching"><label class="other"
+                for="sketching">Sketching</label>
+            <input type="checkbox" name="hobbies" id="dancing" value="dancing"><label class="other"
+                for="dancing">Dancing</label></br>
+            <span class="align"></span><input type="checkbox" name="hobbies" id="others" value="others"><label
+                class="other" for="others">Others</label>
+            <input type="text" placeholder="Examle?" name="hobbies"></p>
+
+        <table>
+            <tr align=left>
+                <td width="170px">Qualification</td>
+                <th>S.No</th>
+                <th>Examination</th>
+                <th>Board</th>
+                <th>Percentage</th>
+                <th>Year of Passing</th>
+            </tr>
+            <tr>
+                <td rowspan="5"></td>
+                <td>1</td>
+                <td><label for="class X" class="other">CLass X</label></td>
+                <td><input type="text" max="10" id="class X" name="class X board"></td>
+                <td><input type="number" step="0.01" min="0.01" maxlength="5" max="99.99" id="class X"
+                        name="class X percentage"></td>
+                <td><input type="number" id="class X" name="class X year"></td>
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><label for="class XII" class="other">Class XII</label></td>
+                <td><input type="text" max="10" id="class XII" name="class XII board"></td>
+                <td><input type="number" step="0.01" min="0.01" maxlength="5" max="99.99" id="class XII"
+                        name="class XII percentage"></td>
+                <td><input type="number" id="class XII" name="class XII year"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><label for="graduation" class="other">Graduation</label></td>
+                <td><input type="text" max="10" id="graduation" name="graduation board"></td>
+                <td><input type="number" step="0.01" min="0.01" maxlength="5" max="99.99" id="graduation"
+                        name="graduation percentage"></td>
+                <td><input type="number" id="graduation" name="graduation year"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><label for="masters" class="other">Masters</label></td>
+                <td><input type="text" max="10" id="masters" name="masters board"></td>
+                <td><input type="number" step="0.01" min="0.01" maxlength="5" max="99.99" id="masters"
+                        name="masters percentage"></td>
+                <td><input type="number" id="masters" name="masters year"></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td class="explain">(10 characters)</td>
+                <td class="explain">(upto 2 decimal)
+                </td>
+            </tr>
+        </table>
+        <p><label for="courses"><span class="explain">*</span>Course<br>
+                Applied for</label><input type="radio" value="BCA" id="BCA" name="courses" required><label for="BCA"
+                class="other">BCA</label>
+            <input type="radio" value="B.Com" id="B.Com" name="courses" required><label for="B.Com" class="other">B.Com</label>
+            <input type="radio" value="B.Sc" id="B.Sc" name="courses"><label for="B.Sc" class="other">B.Sc</label>
+            <input type="radio" value="B.A" id="B.A" name="courses"><label for="B.A" class="other">B.A</label< /p><br>
+                <p align="center"><button type="submit">Submit</button>
+                    <button type="reset">Reset</button></p>
+                <p>* Required fields</p>
+                </button>
+                <br>
+    </form>
+</body>
+
+</html>
+
