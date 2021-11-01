@@ -2,37 +2,103 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
 </head>
+</head>
+<style>
+    .red {
+        color: rgb(221, 11, 11);
+    }
+
+    * {
+        text-align: center;
+        color: white;
+        text-shadow: 2px 1px #000000;
+    }
+
+    body {
+        background-image: url(image.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+    button {
+        border: 2px solid rgb(255, 255, 255);
+        margin: 0 20px;
+        width: 100px;
+        height: 35px;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    div {
+        margin: 50px;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+</style>
 
 <body>
     <h1>IOT Electrical Switch Board</h1>
     <h2>Welcome TO IOT Appliance Control Homepage</h2>
     <h3>Press <spam class="red">ON</spam> to Turn On Switch & <spam class="red">OFF</spam> to Turn OFF the Switch</h3>
-    <div>
-        <p>SWITCH 01: Status : OFF</p>
-        <button width="50px">ON</button>
-        <button width="50px">OFF</button>
-    </div>
-    <div>
-        <p>SWITCH 02: Status : OFF</p>
-        <button width="50px">ON</button>
-        <button width="50px">OFF</button>
-    </div>
-    <div>
-        <p>SWITCH 03: Status : OFF</p>
-        <button width="50px">ON</button>
-        <button width="50px">OFF</button>
-    </div>
-    <div>
-        <p>SWITCH 04: Status : OFF</p>
-        <button width="50px">ON</button>
-        <button width="50px">OFF</button>
-    </div>
+    <div> <p>SWITCH 01: Status : OFF</p> <a href=\"/ledon1"\"><button>ON</button></a></a> <a href=\"/ledoff1"\"><button>OFF</button></a> </div>
+    <div> <p>SWITCH 02: Status : OFF</p> <a href=\"/ledon2"\"><button>ON</button></a> <a href=\"/ledoff2"\"><button>OFF</button></a> </div>
+    <div> <p>SWITCH 03: Status : OFF</p> <a href=\"/ledon3"\"><button>ON</button></a> <a href=\"/ledoff3"\"><button>OFF</button></a> </div>
+    <div> <p>SWITCH 04: Status : OFF</p> <a href=\"/ledon4"\"><button>ON</button></a> <a href=\"/ledoff4"\"><button>OFF</button></a> </div>
 </body>
 
 </html>
+
+<!-- TradingView Widget BEGIN -->
+<!-- <div class="tradingview-widget-container">
+    <div id="tradingview_91389"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/GOOGL/" rel="noopener" target="_blank"><span class="blue-text">Google</span></a> by TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.MediumWidget(
+    {
+    "symbols": [
+      [
+        "Google",
+        "GOOGL"
+      ],
+      [
+        "Bitcoin",
+        "BINANCE:BTCUSDT|12M"
+      ],
+      [
+        "Doge",
+        "BINANCE:DOGEUSDT|12M"
+      ],
+      [
+        "Ethereum",
+        "BINANCE:ETHUSDT|12M"
+      ]
+    ],
+    "chartOnly": false,
+    "width": "1000",
+    "height": "400",
+    "locale": "en",
+    "colorTheme": "light",
+    "gridLineColor": "rgba(240, 243, 250, 0)",
+    "fontColor": "#787B86",
+    "isTransparent": false,
+    "autosize": false,
+    "showFloatingTooltip": true,
+    "scalePosition": "no",
+    "scaleMode": "Normal",
+    "fontFamily": "Trebuchet MS, sans-serif",
+    "noTimeScale": false,
+    "chartType": "area",
+    "lineColor": "#2962FF",
+    "bottomColor": "rgba(41, 98, 255, 0)",
+    "topColor": "rgba(41, 98, 255, 0.3)",
+    "container_id": "tradingview_91389"
+  }
+    );
+    </script>
+  </div> -->
+<!-- TradingView Widget END -->
