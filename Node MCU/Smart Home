@@ -5,12 +5,15 @@ WiFiServer server(80);
 
 #define led1 D5
 #define led2 D6
+#define led3 D7
+#define led4 D8
 
 void setup()
 {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  WiFi.begin("Mooazam", "mooazam123");
+  //Connect with hotspot
+  WiFi.begin("Unknown", "pakistan123");
   while (WiFi.status() != WL_CONNECTED)
   {
     delay(200);
@@ -20,8 +23,19 @@ void setup()
   Serial.println("NodeMCU is connected!");
   Serial.println(WiFi.localIP());
   server.begin();
+
+  //  //Connect with NodeMCU wifi
+  //  WiFi.softAP("NodeMCU", "123456789");
+  //  Serial.println();
+  //  Serial.println("NodeMCU Started!");
+  //  Serial.println(WiFi.softAPIP());
+  //  server.begin();
+
+
   pinMode(led1, OUTPUT);
   pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+  pinMode(led4, OUTPUT);
 }
 
 void loop()
@@ -33,25 +47,59 @@ void loop()
     String request =  client.readStringUntil('\n');
     Serial.println(request);
     request.trim();
-    if (request == "GET /led1on HTTP/1.1")
+    if (request == "GET /ledon1 HTTP/1.1")
     {
       digitalWrite(led1, HIGH);
       Serial.println("LED 1 is ON");
     }
-    if (request == "GET /led1off HTTP/1.1")
+    if (request == "GET /ledoff1 HTTP/1.1")
     {
       digitalWrite(led1, LOW);
       Serial.println("LED 1 is OFF");
     }
-    if (request == "GET /led2on HTTP/1.1")
+    if (request == "GET /ledon2 HTTP/1.1")
     {
       digitalWrite(led2, HIGH);
       Serial.println("LED 2 is ON");
     }
-    if (request == "GET /led2off HTTP/1.1")
+    if (request == "GET /ledoff2 HTTP/1.1")
     {
       digitalWrite(led2, LOW);
       Serial.println("LED 2 is OFF");
     }
+    if (request == "GET /ledon3 HTTP/1.1")
+    {
+      digitalWrite(led3, HIGH);
+      Serial.println("LED 2 is OFF");
+    }
+    if (request == "GET /ledoff3 HTTP/1.1")
+    {
+      digitalWrite(led3, LOW);
+      Serial.println("LED 2 is OFF");
+    }
+    if (request == "GET /ledon4 HTTP/1.1")
+    {
+      digitalWrite(led4, HIGH);
+      Serial.println("LED 2 is OFF");
+    }
+    if (request == "GET /ledoff4 HTTP/1.1")
+    {
+      digitalWrite(led4, LOW);
+      Serial.println("LED 2 is OFF");
+    }
+    client.println("HTTP/1.1 200 OK");
+    client.println("Content-type:text/html");
+    client.println("Connection: close");
+    client.println("");
+    //client.println("<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF - 8"> <meta http-equiv="X - UA - Compatible" content="IE = edge"> <meta name="viewport" content="width = device - width, initial - scale = 1.0"> <title>Document</title> <link rel="stylesheet" href="style.css"> </head> </head> <style> .red { color: rgb(221, 11, 11); } * { text-align: center; color: white; text-shadow: 2px 1px #000000; } body { background-image: url(image.png); background-position: center; background-size: cover; } button { border: 2px solid rgb(255, 255, 255); margin: 0 20px; width: 100px; height: 35px; background-color: transparent; cursor: pointer; } div { margin: 50px; } h1 { font-size: 4em; } </style> <body> <h1>IOT Electrical Switch Board</h1> <h2>Welcome TO IOT Appliance Control Homepage</h2> <h3>Press <spam class="red">ON</spam> to Turn On Switch & <spam class="red">OFF</spam> to Turn OFF the Switch</h3> <div> <p>SWITCH 01: Status : OFF</p> <a href=\"/ledon1"\"><button>ON</button></a></a> <a href=\"/ledoff1"\"><button>OFF</button></a> </div> <div> <p>SWITCH 02: Status : OFF</p> <a href=\"/ledon2"\"><button>ON</button></a> <a href=\"/ledoff2"\"><button>OFF</button></a> </div> <div> <p>SWITCH 03: Status : OFF</p> <a href=\"/ledon3"\"><button>ON</button></a> <a href=\"/ledoff3"\"><button>OFF</button></a> </div> <div> <p>SWITCH 04: Status : OFF</p> <a href=\"/ledon4"\"><button>ON</button></a> <a href=\"/ledoff4"\"><button>OFF</button></a> </div> </body> </html>");
+        client.println("<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"UTF - 8\"> <meta http-equiv=\"X - UA - Compatible\" content=\"IE = edge\"> <meta name=\"viewport\" content=\"width = device - width, initial - scale = 1.0\"> <title>Document</title> <link rel=\"stylesheet\" href=\"style.css\"> </head> </head> <style> .red{ color: rgb(221, 11, 11); } *{ text-align: center; color: white; text-shadow: 2px 1px #000000; } body { background-image: url(image.png); background-position: center; background-size: cover; } button{ border: 2px solid rgb(255, 255, 255); margin: 0 20px; width: 100px; height: 35px; background-color: transparent; cursor: pointer; } div{ margin: 50px; } h1{ font-size: 4em; } </style><body> <h1>IOT Electrical Switch Board</h1> <h2>Welcome TO IOT Appliance Control Homepage</h2> <h3>Press <spam class=\"red\">ON</spam> to Turn On Switch & <spam class=\"red\">OFF</spam> to Turn OFF the Switch</h3><div> <p>SWITCH 01: Status : OFF</p> <a href=\"/ledon1\"\"><button>ON</button></a> <a href=\"/ledoff1\"><button>OFF</button></a> </div><div> <p>SWITCH 02: Status : OFF</p> <a href=\"/ledon2\"><button>ON</button></a> <a href=\"/ledoff2\"><button>OFF</button></a> </div><div> <p>SWITCH 03: Status : OFF</p> <a href=\"/ledon3\"><button>ON</button></a> <a href=\"/ledoff3\"><button>OFF</button></a> </div><div> <p>SWITCH 04: Status : OFF</p> <a href=\"/ledon4\"><button>ON</button></a> <a href=\"/ledoff4\"><button>OFF</button></a> </div> </html>");
+        client.println("");
+        client.println("");
+    
+        client.println("");
+        client.println("");
+        client.println("");
+        client.println("");
+        client.println("");
   }
 }
